@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>THE HR MAGNIFICENT</title>
+
+  
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- magnific popup -->
+  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- themify icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- animate -->
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- Aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  
+  <!--Favicon-->
+  <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
+
+</head>
+
+<body>
+  
+
+<!-- preloader start -->
+<div class="preloader">
+    <img src="images/preloader.gif" alt="preloader">
+</div>
+<!-- preloader end -->
+
+<section class="d-flex align-items-center justify-content-center" style="height: 150vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="signup">
+                  
+                        <div class="col-md-12">
+                            <div class="signup-form">
+                               
+                                    <div class="col-lg-12">
+                                        <h4>Register For Soft Skill Trainings</h4>
+                                        <div> <br><p class="">Home
+                                            <a href="index.html">Click Here</a>
+                                        </p></div>
+                                        
+                                    </div>
+                                    <form method="post" autocomplete="off" name="google-sheet" >
+                                    <div class="col-lg-12">
+                                        
+                                        <input type="text" class="form-control"  name="Name" placeholder=" Name" value="" required=""/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        
+                                        <input type="text" class="form-control"  name="Company Name" placeholder=" Company Name" value="" required=""/>
+                                    </div>
+                                   
+                                    <div class="col-lg-12">
+                                        <input type="email" class="form-control"  name="Email" placeholder="Email Address" value="" required=""/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type=" number" class="form-control"  name="Number" placeholder=" Phone Number" value="" required=""/>
+                                    </div>
+                                   <span class="font-size" style="font-family: 'Times New Roman', Times, serif; color: rgb(82, 7, 7); ">Select Any Three</span> <br>
+                                   <div class="font-prof">
+                                    <span id="notvalid"></span><br>
+                                    <input type="checkbox" class="chk" name="selected_course1" value="Depression" onclick="return check_3only()"> Depression<br>
+                                    <input type="checkbox" class="chk"  name="selected_course2" value=" Challenge Youself " onclick="return check_3only()"> Challenge Youself<br>
+                                    <input type="checkbox" class="chk" name="selected_course3" value="Appreciation"onclick="return check_3only()"> Appreciation<br>
+                                    <input type="checkbox" class="chk" name="selected_course4" value="Belive in Yourself"onclick="return check_3only()"> Belive in Yourself<br>
+                                    <input type="checkbox"  class="chk"name="selected_course5" value="Self Motivation"onclick="return check_3only()"> Self Motivation<br>
+                                    <input type="checkbox" class="chk" name="selected_course6" value="Stress Management"onclick="return check_3only()"> Stress Management<br>
+                                    <input type="checkbox" class="chk" name="selected_course7" value="Team Building"onclick="return check_3only()"> Team Building<br>
+                                    <input type="checkbox" class="chk" name="selected_course8" value="Leadership Management"onclick="return check_3only()"> Leadership <br>
+                                    <input type="checkbox" class="chk" name="selected_course9" value="Ethics/Integrity"onclick="return check_3only()"> Ethics/Integrity<br>
+                                    <input type="checkbox" class="chk" name="selected_course10" value=" Body Language"onclick="return check_3only()"> Body Language<br>
+                                    <input type="checkbox" class="chk" name="selected_course11" value="Recognizing and Rewarding Success"onclick="return check_3only()"> Recognizing and Rewarding Talents<br>
+                                    <input type="checkbox" class="chk" name="selected_course12" value="High Morale"onclick="return check_3only()"> High Morale<br>
+                                    <input type="checkbox" class="chk" name="selected_course13" value=" Work Life Balance"onclick="return check_3only()"> Work Life Balance<br>
+                                    <input type="checkbox" class="chk" name="selected_course14" value="People Handling" onclick="return check_3only()"> People Handling<br>
+                                    <input type="checkbox" class="chk" name="selected_course15" value="Communication Skills"onclick="return check_3only()"> Communication Skills<br>
+                                    <input type="checkbox" class="chk" name="selected_course16" value="Grooming Standards"onclick="return check_3only()"> Self Confidence<br>
+                                </div>
+                                <div>
+                                   
+                                </div>
+                                    <div class="col-sm-4 ">
+                                        
+                                        <input type="submit"id="sub" name="submit" class=" btnSubmit btn-block form-group" />
+
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+         function check_3only(){
+            var a = document.getElementsByClassName('chk');
+            var newvar=0;
+            var count;
+            for(count=0;count<a.length;count++){
+                if(a[count].checked==true){
+                    newvar=newvar+1;
+                }
+                if(newvar>=4){
+                document.getElementById('notvalid').innerHTML="**Please Select only three"
+                return false;
+               }
+            }
+               
+
+
+         }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwr1UILpmDzHdqccNpeD8iqmKJORpVsYqqEtvnY5Z-tx0aVWVpQCLxDRJo4QzaPIEZ5Rw/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      document.querySelector("#sub").value = "Submiting..";
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .then(data => {
+            document.querySelector("#sub").value = "Submitted"
+            
+        });
+        
+    })
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- magnific popup -->
+<script src="plugins/magnific-popup/jquery.magnific.popup.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- mixitup filter -->
+<script src="plugins/mixitup/mixitup.min.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI14J_PNWVd-m0gnUBkjmhoQyNyd7nllA"></script>
+<script  src="plugins/google-map/gmap.js"></script>
+<!-- Syo Timer -->
+<script src="plugins/syotimer/jquery.syotimer.js"></script>
+<!-- aos -->
+<script src="plugins/aos/aos.js"></script>
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
